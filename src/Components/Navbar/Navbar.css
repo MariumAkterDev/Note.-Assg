@@ -1,0 +1,23 @@
+.main_dis{
+    @apply bg-[#FAD02C] pt-[40px]
+}
+.menu_row{
+    @apply h-[100px] flex justify-between items-center
+}
+.logoCol{
+    @apply h-full flex justify-center items-center
+}
+.logoCol img{
+    @apply w-[160px] h-[60px] cursor-default
+}
+.menuBtnCol{
+    @apply font-Lato font-semibold text-[20px] flex items-center justify-center gap-[10px]
+}
+.login,
+.signup{
+    @apply bg-[#000] text-[#F5F5DC] w-[119px] h-[48px] rounded-[50px] flex justify-center items-center 
+    shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] active:shadow-none 
+}
+.signup{
+    @apply bg-[#F5F5DC] text-[#000] 
+}

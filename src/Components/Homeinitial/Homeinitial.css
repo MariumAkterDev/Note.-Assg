@@ -1,0 +1,18 @@
+.main_compound{
+    @apply bg-brandColor h-[100vh] 
+}
+.anothers{
+    @apply w-full flex flex-col items-center 
+}
+.text{
+    @apply w-[1200px] 
+}
+.text p{
+    @apply  font-Lato font-extrabold text-[40px] pt-[100px] text-[#474747]
+}
+.text span{
+    @apply bg-[#13c97a] px-2 text-secondColor 
+}
+.anothers img{
+    @apply w-[548px] h-[354px] mt-[30px]  bg-[#13c97a] rounded-lg shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]
+}

@@ -1,0 +1,33 @@
+.Mother{
+    @apply  bg-[#5a7d6e] flex justify-center items-center w-[100%] h-[100vh]
+}
+.Signbg{
+    @apply py-11 w-[550px] px-16 flex justify-center items-center flex-col bg-[#F3F3E0] shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]
+}
+.signHead{
+    @apply text-[60px] text-[#ff6d24]
+}
+.signP{
+    @apply mt-2 font-poppins text-[#d55125] text-xl
+}
+.info{
+    @apply mt-7 flex flex-col gap-[40px]  
+}
+.signLbl{
+    @apply text-[24px] text-[#740938] 
+}
+.signInp{
+    @apply w-[450px] h-[47px] bg-[transparent] border-b-[2px] border-b-[#740938] outline-none text-[28px] text-[black]
+}
+.signBtn{
+    @apply w-[450px] h-[65px] mt-[50px] text-3xl font-bold text-[white] bg-[#ff6d24] rounded-lg transition duration-75 active:scale-[0.98] hover:brightness-[130%]
+}
+.signRemem{
+    @apply w-[100%] mt-6 flex justify-start items-center gap-3 text-[20px] text-[#798645]
+}
+.same{
+    @apply flex flex-col items-start relative
+}
+.openeye, .closeeye{
+    @apply absolute text-3xl text-[#891414] top-[40px] right-[12px]
+} 

@@ -1,0 +1,36 @@
+.main_dis{
+    @apply bg-[#FAD02C] pt-[40px]
+}
+.menu_row{
+    @apply h-[100px] flex justify-between items-center
+}
+.logoCol{
+    @apply h-full flex justify-center items-center
+}
+.logoCol img{
+    @apply w-[160px] h-[60px] cursor-default
+}
+.menuEnd{
+    @apply flex items-center justify-center mb-3 gap-[10px]
+}
+.profileImg{
+    @apply w-[60px] h-[60px] bg-[gray]  rounded-full overflow-hidden 
+}
+.userName{
+    @apply text-[black] text-[22px] font-medium 
+}
+.logoutCard{
+    @apply bg-[#13C97A] flex justify-center items-center gap-[5px] w-[159px] py-[4px] rounded-lg
+}
+.logoutCard h6{
+    @apply text-[white] text-[22px] font-medium 
+}
+.logout_icon{
+    @apply text-[25px] text-[white] font-bold
+}
+.menuDp{
+    @apply relative
+}
+.logOut{
+    @apply absolute top-[57px] left-[53px]
+}
