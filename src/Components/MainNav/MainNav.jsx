@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import './MainNav.css'
 import { Link } from 'react-router-dom'
 import { VscSignOut } from "react-icons/vsc";
+import { useSelector } from 'react-redux';
 
 
 
 const MainNav = () => {
   // ======================= usestate for dropdown
   const [show, setShow] = useState(false);
-
+  // ======================= taking Data from Redux
+  const sliceUser = useSelector((state)=>state.currentUser.value)
 
 
 
@@ -24,8 +26,10 @@ const MainNav = () => {
             </div>
             <div className="menuDp">
               <div className="menuEnd">
-                <div className="profileImg" onClick={() => setShow(!show)}></div>
-                <h3 className="userName">Lorem, ipsum</h3>
+                <div className="profileImg" onClick={() => setShow(!show)}>
+                  <img src={sliceUser?.photoURL} alt="" />
+                </div>
+                <h3 className="userName">{sliceUser?.displayName}</h3>
               </div>
               {show ? (
                 <button className="logOut">

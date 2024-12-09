@@ -5,6 +5,8 @@ import { IoIosEyeOff } from "react-icons/io";
 import { IoIosEye } from "react-icons/io";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Bounce, toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { userData } from "../../Slice/counterSlice";
 
 const LogIn = () => {
   // ======================= usestate for eye icon
@@ -13,11 +15,15 @@ const LogIn = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   // ======================= usestate for error
   const [error, setError] = useState({ emailError: "", passwordError: "" });
-
   // =============== firebase variable
   const auth = getAuth();
+  // ==================== send user's data using dispatch of Redux
+  const sentUserData = useDispatch()
+  // ============== Navigation variable
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
+
+
   // =========================< Main Funtions >=================================
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,59 +37,61 @@ const LogIn = () => {
       signInWithEmailAndPassword(auth, formData.email, formData.password)
         .then((userCredential) => {
           const user = userCredential.user;
-           console.log(user)
-           if(user.emailVerified == true){
+          console.log(user);
+          if (user.emailVerified == true) {
             // ------------------- Navigate to note pad page
-            navigate('/LayoutThree')
-                // --------------------- success toast
-                toast.success('Successfully LogIn', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                    transition: Bounce,
-                });
-           }else{
-                navigate('/LayoutTwo/SignUp')
-                toast.warn('Account is not verified', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                    transition: Bounce,
-                });
-            }
+            navigate("/LayoutThree");
+            // --------------------- success toast
+            toast.success("Successfully LogIn", {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
+            // -------------------- Store the user's Datas from login to rudux & Local storage
+            sentUserData(userData(user))
+            localStorage.setItem('userProfile' , JSON.stringify(user))
+ 
+          } else {
+            navigate("/LayoutTwo/SignUp");
+            toast.warn("Account is not verified", {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
+          }
         })
         .catch((error) => {
-            const errorCode = error.code;
+          const errorCode = error.code;
 
-            if(errorCode == 'auth/invalid-credential'){
-                // --------------------- error toast for wrong input
-                toast.warn('Something went wrong', {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                    transition: Bounce,
-                });
-            }
+          if (errorCode == "auth/invalid-credential") {
+            // --------------------- error toast for wrong input
+            toast.warn("Something went wrong", {
+              position: "top-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
+          }
         });
     }
   };
-
-   
 
   return (
     <>

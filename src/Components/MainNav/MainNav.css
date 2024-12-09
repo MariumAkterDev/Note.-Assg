@@ -14,7 +14,7 @@
     @apply flex items-center justify-center mb-3 gap-[10px]
 }
 .profileImg{
-    @apply w-[60px] h-[60px] bg-[gray]  rounded-full overflow-hidden 
+    @apply w-[60px] h-[60px] bg-[gray] border-[#1b1b1b] border-[1px]  rounded-full overflow-hidden 
 }
 .userName{
     @apply text-[black] text-[22px] font-medium 
