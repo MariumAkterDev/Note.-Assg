@@ -1,0 +1,24 @@
+.sideNav{
+    @apply w-[250px] bg-[#0000001a] h-screen  text-left
+}
+.sideNav h2{
+    @apply text-[24px] font-semibold font-poppins text-[#929191] pl-[25px] mt-[15px]
+}
+.sideNav ul li{
+    @apply mt-[25px]
+}
+.activePage{
+    @apply bg-[#4DC5D4] text-[22px] text-[white] font-medium  pl-[25px]  w-full py-[20px] flex items-center gap-[10px]
+}
+.notActivePage{
+    @apply bg-[transparent] text-[22px] text-[black] font-medium  pl-[25px]  w-full py-[20px] flex items-center gap-[10px]
+}
+.activePage .noteIcon{
+    @apply text-[#4646f7]
+}
+.activePage .pinIcon{
+    @apply text-[red]
+}
+.activePage .binIcon{
+    @apply text-[#6A1E55]
+}

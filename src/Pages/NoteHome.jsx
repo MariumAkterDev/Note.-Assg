@@ -3,7 +3,11 @@ import './NoteHome.css'
 
 const NoteHome = () => {
   return (
-    <div>NoteHome</div>
+    <>
+      <h1>hello
+        
+      </h1>
+    </>
   )
 }
 

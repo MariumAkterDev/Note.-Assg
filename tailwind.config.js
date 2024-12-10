@@ -17,6 +17,7 @@ export default {
       colors: {
         'brandColor': '#FAD02C',
         'secondColor': '#F5F5DC',
+        'thirdColor': '#13C97A',
       }
   },
   

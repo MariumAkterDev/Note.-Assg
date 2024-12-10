@@ -20,7 +20,7 @@
     @apply text-[black] text-[22px] font-medium 
 }
 .logoutCard{
-    @apply bg-[#13C97A] flex justify-center items-center gap-[5px] w-[159px] py-[4px] rounded-lg
+    @apply bg-[#4DC5D4] flex justify-center items-center gap-[5px] w-[159px] py-[4px] rounded-lg
 }
 .logoutCard h6{
     @apply text-[white] text-[22px] font-medium 

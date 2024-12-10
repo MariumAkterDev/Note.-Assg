@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import MainNav from '../Components/MainNav/MainNav'
 import { useSelector } from 'react-redux'
+import SideNav from '../Components/SideNav/SideNav'
+import NoteHome from '../Pages/NoteHome'
 
 const LayoutThree = () => {
   // ======================= taking Data from Redux
@@ -18,7 +20,11 @@ const LayoutThree = () => {
   return (
     <>
         <MainNav/>
-        <Outlet/>
+        <div className='flex'>
+          <SideNav/>
+          <Outlet/>
+        </div>
+        
     </>
   )
 }

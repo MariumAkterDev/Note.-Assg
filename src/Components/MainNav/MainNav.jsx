@@ -1,16 +1,29 @@
 import React, { useState } from 'react'
 import './MainNav.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { VscSignOut } from "react-icons/vsc";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { userData } from '../../Slice/counterSlice';
 
 
 
 const MainNav = () => {
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+
   // ======================= usestate for dropdown
   const [show, setShow] = useState(false);
   // ======================= taking Data from Redux
   const sliceUser = useSelector((state)=>state.currentUser.value)
+  // ============================== Logout function
+  const handleLogOut = ()=>{
+    navigate('/')
+    localStorage.removeItem('userProfile')
+    dispatch(userData(null))
+
+  }
 
 
 
@@ -32,7 +45,7 @@ const MainNav = () => {
                 <h3 className="userName">{sliceUser?.displayName}</h3>
               </div>
               {show ? (
-                <button className="logOut">
+                <button className="logOut" onClick={handleLogOut}>
                   <div className="logoutCard">
                     <div className="logout_icon">
                       <VscSignOut />

@@ -11,6 +11,8 @@ import NoteHome from './Pages/NoteHome'
 import NotFound from './Pages/NotFound'
 import app from './Firebase.config'
 import { ToastContainer } from 'react-toastify'
+import PinNotePage from './Pages/PinNotePage'
+import BinNotePage from './Pages/BinNotePage'
 
 
 function App() {
@@ -29,7 +31,9 @@ function App() {
         </Route>
         {/* =============== LayoutThree ================== */}
         <Route path='/LayoutThree' element={<LayoutThree/>} >
-          <Route index element={<NoteHome/>}  />
+          <Route path='/LayoutThree/AllNote' element={<NoteHome/>} />
+          <Route path='/LayoutThree/PinNote'  element={<PinNotePage/>} />
+          <Route path='/LayoutThree/BinNote'  element={<BinNotePage/>} />
         </Route>
       </Route>
     )

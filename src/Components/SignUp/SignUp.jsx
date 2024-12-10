@@ -49,8 +49,8 @@ const SignUp = () => {
           // ---------------- update user photo and name
           updateProfile(auth.currentUser, {
             displayName: formData.userName,
-            photoURL:
-              "https://cdn-icons-png.flaticon.com/512/3607/3607444.png",
+            // photoURL:
+            //   "https://cdn-icons-png.flaticon.com/512/3607/3607444.png",
           }).then(() => {
             // --------------- user varification email code
             sendEmailVerification(auth.currentUser).then(() => {});
