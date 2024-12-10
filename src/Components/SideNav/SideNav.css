@@ -1,14 +1,17 @@
 .sideNav{
-    @apply w-[250px] bg-[#0000001a] h-screen  text-left
+    @apply w-[350px] bg-[#0000001a] h-screen text-left transition-all duration-[0.4s]
 }
-.sideNav h2{
-    @apply text-[24px] font-semibold font-poppins text-[#929191] pl-[25px] mt-[15px]
+.sideNavTop{
+    @apply  h-[40px] w-full flex items-center justify-between mt-[15px] px-[25px] 
+}
+.sideNav h6{
+    @apply text-[24px] font-semibold font-poppins text-[#929191]
 }
 .sideNav ul li{
     @apply mt-[25px]
 }
 .activePage{
-    @apply bg-[#4DC5D4] text-[22px] text-[white] font-medium  pl-[25px]  w-full py-[20px] flex items-center gap-[10px]
+    @apply bg-thirdColor text-[22px] text-[white] font-medium  pl-[25px]  w-full py-[20px] flex items-center gap-[10px]
 }
 .notActivePage{
     @apply bg-[transparent] text-[22px] text-[black] font-medium  pl-[25px]  w-full py-[20px] flex items-center gap-[10px]
@@ -20,5 +23,5 @@
     @apply text-[red]
 }
 .activePage .binIcon{
-    @apply text-[#6A1E55]
+    @apply text-[#a2247e]
 }

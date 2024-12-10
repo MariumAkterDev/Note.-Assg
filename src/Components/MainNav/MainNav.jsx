@@ -29,7 +29,7 @@ const MainNav = () => {
 
   return (
     <>
-      <div className="main_dis">
+      <div className="main_dis dark:bg-thirdColor">
         <div className="container">
           <div className="menu_row !pb-[30px]">
             <div className="logoCol">

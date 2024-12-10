@@ -30,6 +30,7 @@
 }
 .nav_Home:hover::before{
     display: block;
+    
 }
 .menuBtnCol{
     @apply font-Lato font-semibold text-[20px] flex items-center justify-center gap-[10px]

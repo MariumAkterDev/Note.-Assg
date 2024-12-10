@@ -15,6 +15,7 @@ import PinNotePage from './Pages/PinNotePage'
 import BinNotePage from './Pages/BinNotePage'
 
 
+
 function App() {
   const myPath = createBrowserRouter(
     createRoutesFromElements(
