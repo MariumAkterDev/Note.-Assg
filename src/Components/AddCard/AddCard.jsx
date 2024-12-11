@@ -22,10 +22,9 @@ const AddCard = () => {
                 <h2  >Add</h2>
             </div>
         </div>
-        {
-            show&&
-            <PopUp showvalue={show}/>
-        }
+        
+         <PopUp showvalue={show} popCross={()=>setShow(false)}/>
+       
     </>
   )
 }

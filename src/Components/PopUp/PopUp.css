@@ -1,3 +1,25 @@
 .popMother{
-    @apply  h-screen bg-[#00000091]  absolute top-0 right-0 
+    @apply  h-screen bg-[#00000091]  absolute top-0 right-0 transition-all duration-700 ease-in-out flex justify-center items-center
+}
+.cross_Icon{
+    @apply hover:scale-[1.2] hover:text-[red]  transition-all duration-[0.2s]
+}
+.cross{
+    @apply text-[30px] text-[white] absolute top-[50px] right-[50px]
+}
+.popNote{
+    @apply w-[800px] h-[700px] bg-[white] rounded-md p-[25px]
+}
+.popNote h2{
+    @apply font-poppins text-[30px] font-semibold text-[#787777] 
+}
+.popTiltleInp{
+    @apply w-full h-[50px] rounded-[4px] bg-[#f3f1f1] outline-none mt-[8px] px-[20px] text-[26px] font-poppins font-medium text-[#0d7636]
+}
+.popNoteInp{
+    @apply bg-[#f3f1f1] w-full h-[400px] rounded-[4px] mt-[8px] outline-none px-[20px] py-[10px] text-[24px] font-poppins font-normal text-[#1b1b1b]
+}
+.popTiltleInp::placeholder ,
+.popNoteInp::placeholder {
+    @apply italic
 }

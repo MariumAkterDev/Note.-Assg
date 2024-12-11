@@ -3,16 +3,34 @@ import './PopUp.css'
 import { RxCross2 } from "react-icons/rx";
 
 
-const PopUp = ({showvalue}) => {
+const PopUp = ({showvalue, popCross}) => {
 
  
 
   return (
     <>
-        <div className={`popMother ${showvalue ? 'w-full' : 'w-0'} transition-all duration-700 ease-in-out`}>
-              <div className="cross text-[30px] text-[white] absolute top-[50px] right-[50px] hover:rotate-90">
-                <RxCross2 className=''/>
-              </div>
+        <div className={`popMother ${showvalue ? 'w-full' : 'w-0'}`}>
+          <button onClick={popCross} className={`cross ${showvalue ? 'opacity-[1]' : 'opacity-0' }`}>
+            <RxCross2 className='cross_Icon'/>
+          </button>
+          {/* ================================= Input Feilds ================================= */}
+          <div className="popNote">
+            {/* ============ All input and title fields ============= */}
+            <h2>Title</h2>
+            <input className='popTiltleInp' placeholder='Add a title....' type="text" />
+            <h2 className='mt-[20px]'>Note</h2>
+            <textarea className='popNoteInp' placeholder='Take a note...' type="text" />
+            {/* ----------------- All input and title fields ----------------- */}
+          </div>
+
+
+
+ 
+
+
+
+
+
         </div>
     </>
   )

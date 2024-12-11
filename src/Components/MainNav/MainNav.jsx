@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { VscSignOut } from "react-icons/vsc";
 import { useDispatch, useSelector } from 'react-redux';
 import { userData } from '../../Slice/counterSlice';
+import myLogo from '../../../public/images/logo.png'
 
 
 
@@ -34,7 +35,7 @@ const MainNav = () => {
           <div className="menu_row !pb-[30px]">
             <div className="logoCol">
               <Link to="/">
-                <img src="images/logo.png" alt="Logo" />
+                <img src="/images/logo.png" alt="Logo" />
               </Link>
             </div>
             <div className="menuDp">

@@ -1,5 +1,5 @@
 .main_card{
-    @apply w-[250px] h-[250px] bg-[#f1f1f1] border-[1px] border-[#9694945d] mt-[15px] ml-[15px] flex justify-center items-center rounded-md
+    @apply w-[250px] h-[250px] bg-[#f1f1f1] border-[1px] border-[#4140405d] mt-[15px] ml-[15px] flex justify-center items-center rounded-md
 }
 .addIcon {
     @apply flex justify-center items-center gap-[7px] w-[150px] h-[150px] 

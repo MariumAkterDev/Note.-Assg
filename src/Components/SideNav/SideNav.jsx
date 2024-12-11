@@ -55,7 +55,7 @@ const SideNav = () => {
         <ul>
           <li>
             <NavLink
-              to="/LayoutThree/AllNote"
+              to="/LayoutThree/NoteHome"
               className={({ isActive }) =>[ isActive ? "activePage" : "notActivePage dark:text-[white]", ].join(" ")
               }
             >

@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="container">
           <div className="menu_row">
             <div className="logoCol">
-              <Link to="/"><img src="images/logo.png" alt="Logo" /></Link>
+              <Link to="/"><img src="/images/logo.png" alt="Logo" /></Link>
             </div>
             <div className="home">
               <div onClick={handleHome} className='nav_Home'><IoIosHome /></div>

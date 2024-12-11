@@ -32,7 +32,7 @@ function App() {
         </Route>
         {/* =============== LayoutThree ================== */}
         <Route path='/LayoutThree' element={<LayoutThree/>} >
-          <Route path='/LayoutThree/AllNote' element={<NoteHome/>} />
+          <Route path='/LayoutThree/NoteHome' element={<NoteHome/>} />
           <Route path='/LayoutThree/PinNote'  element={<PinNotePage/>} />
           <Route path='/LayoutThree/BinNote'  element={<BinNotePage/>} />
         </Route>
