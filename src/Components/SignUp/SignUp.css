@@ -1,5 +1,5 @@
 .Mother{
-    @apply  bg-[#5a7d6e] flex justify-center items-center w-[100%] h-[100vh]
+    @apply  bg-[#5a7d6e] flex justify-center items-center w-[100%] h-screen 
 }
 .Signbg{
     @apply py-11 w-[550px] px-16 flex justify-center items-center flex-col bg-[#F3F3E0] shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]

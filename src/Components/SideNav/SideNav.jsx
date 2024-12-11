@@ -41,11 +41,11 @@ const SideNav = () => {
           {/* ===================> toggle starts */}
           <div className="modeButton">
           {localStorage.getItem("mode") == "light" ? (
-            <button className="py-1 px-3 bg-[#343434] text-xl text-[white] rounded-sm" onClick={handelMode}>
+            <button className="modeBtn_dark" onClick={handelMode}>
               Dark
             </button>
           ) : (
-            <button className="py-1 px-3 bg-thirdColor text-[white] rounded-sm text-xl" onClick={handelMode}>
+            <button className="modeBtn_light" onClick={handelMode}>
               Light
             </button>
           )}

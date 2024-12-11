@@ -1,5 +1,5 @@
 .sideNav{
-    @apply w-[350px] bg-[#0000001a] h-screen text-left transition-all duration-[0.4s]
+    @apply w-[350px] bg-[#0000001a] text-left transition-all duration-[0.4s] h-[100vh] 
 }
 .sideNavTop{
     @apply  h-[40px] w-full flex items-center justify-between mt-[15px] px-[25px] 
@@ -10,11 +10,12 @@
 .sideNav ul li{
     @apply mt-[25px]
 }
-.activePage{
+.activePage,
+.notActivePage{
     @apply bg-thirdColor text-[22px] text-[white] font-medium  pl-[25px]  w-full py-[20px] flex items-center gap-[10px]
 }
 .notActivePage{
-    @apply bg-[transparent] text-[22px] text-[black] font-medium  pl-[25px]  w-full py-[20px] flex items-center gap-[10px]
+    @apply bg-[transparent] text-[black] 
 }
 .activePage .noteIcon{
     @apply text-[#4646f7]
@@ -24,4 +25,11 @@
 }
 .activePage .binIcon{
     @apply text-[#a2247e]
+}
+.modeBtn_dark, 
+.modeBtn_light{
+    @apply w-[70px] h-[33px] bg-[#343434] text-xl text-[white] rounded-sm
+}
+.modeBtn_light{
+    @apply  bg-thirdColor 
 }

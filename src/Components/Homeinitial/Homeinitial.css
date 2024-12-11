@@ -1,5 +1,5 @@
 .main_compound{
-    @apply bg-brandColor h-[100vh] 
+    @apply bg-brandColor h-screen overflow-y-hidden
 }
 .anothers{
     @apply w-full flex flex-col items-center 
