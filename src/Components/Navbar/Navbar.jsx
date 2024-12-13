@@ -33,7 +33,7 @@ const Navbar = () => {
               <div onClick={handleHome} className='nav_Home'><IoIosHome /></div>
             </div>
             <div className="menuBtnCol">
-              <button className='login'><Link to="/LayoutTwo">Log In</Link></button>
+              <button className='login text-red-500'><Link to="/LayoutTwo">Log In</Link></button>
               <button className='signup'><Link to="/LayoutTwo/SignUp" >Sign Up</Link></button>
             </div>
           </div>

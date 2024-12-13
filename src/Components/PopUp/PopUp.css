@@ -8,7 +8,7 @@
     @apply text-[30px] text-[white] absolute top-[50px] right-[50px]
 }
 .popNote{
-    @apply w-[800px] h-[700px] bg-[white] rounded-md p-[25px]
+    @apply w-[800px] h-[770px] bg-[white] rounded-md p-[25px]
 }
 .popNote h2{
     @apply font-poppins text-[30px] font-semibold text-[#787777] 
@@ -23,3 +23,35 @@
 .popNoteInp::placeholder {
     @apply italic
 }
+/* --------------------- save button ------------------- */
+.saveBtn {
+    width: 100px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #af6df1;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+.saveBtn:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+  
+.saveBtn:active {
+    transform: translateY(-1px);
+}
+/* ---------------- save btn ends -------------------------- */

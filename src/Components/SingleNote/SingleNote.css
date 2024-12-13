@@ -1,0 +1,3 @@
+.todSingCard{
+    @apply  w-[250px] h-[250px] rounded-lg border-[#868484c2] border-[1px] p-2 ml-[15px]
+}
