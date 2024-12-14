@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './PopUp.css'
 import { RxCross2 } from "react-icons/rx";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, push, ref, set } from "firebase/database";
 
 
 const PopUp = ({showvalue, popCross}) => {
@@ -20,7 +20,7 @@ const PopUp = ({showvalue, popCross}) => {
     }else if(todoData.todoNote == ''){
       setTodoData((prev)=>({...prev, todoError: 'Enter your todo note'}))
     }else{
-      set(ref(db, 'AllNote/'), {
+      set(push(ref(db, 'AllNote/')), {
         todoTitle:todoData.todoTitle, 
         todoNote:todoData.todoNote
       });

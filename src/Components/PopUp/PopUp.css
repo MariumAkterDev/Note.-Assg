@@ -1,5 +1,5 @@
 .popMother{
-    @apply  h-screen bg-[#00000091]  absolute top-0 right-0 transition-all duration-700 ease-in-out flex justify-center items-center
+    @apply  h-screen  bg-[#00000093]  absolute top-0 right-0 transition-all duration-700 ease-in-out flex justify-center items-center
 }
 .cross_Icon{
     @apply hover:scale-[1.2] hover:text-[red]  transition-all duration-[0.2s]

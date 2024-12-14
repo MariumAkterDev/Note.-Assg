@@ -8,12 +8,12 @@ import SingleNote from '../Components/SingleNote/SingleNote'
 const NoteHome = () => {
   return (
     <>
-      <div>
-      <AddCard/>
-      <div className='flex flex-wrap mt-[50px]'>
-        <SingleNote/>
-      </div>
-      </div>
+     
+        <div>
+          <AddCard/>
+          <SingleNote/>
+        </div>
+      
     </>
   )
 }
