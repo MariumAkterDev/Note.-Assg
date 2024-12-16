@@ -1,5 +1,5 @@
 .sideNav{
-    @apply w-[350px] bg-[#0000001a] text-left transition-all duration-[0.4s] h-[100vh] 
+    @apply w-[350px] bg-[#0000001a] text-left transition-all duration-[0.4s] h-[100vh] fixed z-[20]
 }
 .sideNavTop{
     @apply  h-[40px] w-full flex items-center justify-between mt-[15px] px-[25px] 

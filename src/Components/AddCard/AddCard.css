@@ -1,11 +1,17 @@
 .main_card{
-    @apply w-[250px] h-[250px] bg-[#f1f1f1] border-[1px] border-[#4140405d] mt-[15px] ml-[15px] flex justify-center items-center rounded-md
+    @apply w-[250px] h-[250px] bg-[#f1f1f1] border-[1px] border-[#4140405d] mb-[70px]  flex justify-center items-center rounded-md transition-all duration-[0.3s]
+}
+.main_card:hover{
+    @apply bg-[#ced0ce97] border-[#41404079]
+}
+.main_card:hover .plusIcon{
+    @apply bg-[gray] text-[white]
 }
 .addIcon {
     @apply flex justify-center items-center gap-[7px] w-[150px] h-[150px] 
 }
 .addIcon .plusIcon{
-    @apply text-[22px] p-[1px] rounded-full border-[1px] border-[#929090] text-[#929090] hover:bg-[#343434] transition-all duration-[0.2s] hover:text-[white] 
+    @apply text-[22px] p-[1px] rounded-full border-[1px] border-[#929090] text-[#929090] transition-all duration-[0.3s]
 }
 .addIcon h2{
     @apply text-[26px] text-[#929090] cursor-default

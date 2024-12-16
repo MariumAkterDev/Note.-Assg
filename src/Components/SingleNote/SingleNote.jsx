@@ -37,19 +37,19 @@ const SingleNote = ({}) => {
 
   return (
     <>
-      <div className="flex justify-between flex-wrap mt-[30px] mr-[15px]">
+      <div className="flex flex-wrap gap-[60px] ">
 
        {/* --------- Data Print fun starts ------------ */}
 
         {allNote.map((item) => (
 
-          <div className="todSingCard mt-[30px]">
+          <div className="todSingCard">
             <h2 className="text-[20px] text-[#5d5c5c] font-semibold">
               {item.todoTitle}
             </h2>
-            <h6 className="text-[16px] text-[gray] !mt-[15px]">
+            <p className="text-[16px] text-[gray] !mt-[15px]">
             {item.todoNote}
-            </h6>
+            </p>
           </div>
 
         ))}

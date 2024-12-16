@@ -77,6 +77,7 @@ const SideNav = () => {
             >
              <span className='binIcon'><RiDeleteBin5Fill /></span> Bin
             </NavLink>
+            
           </li>
         </ul>
         

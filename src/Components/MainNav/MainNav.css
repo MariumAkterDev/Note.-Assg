@@ -1,5 +1,5 @@
 .main_dis{
-    @apply bg-[#FAD02C] pt-[40px]
+    @apply bg-[#FAD02C] pt-[40px] dark:bg-thirdColor sticky top-0 z-50
 }
 .menu_row{
     @apply h-[100px] flex justify-between items-center

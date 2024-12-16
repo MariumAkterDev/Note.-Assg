@@ -3,7 +3,7 @@ import './BinNotePage.css'
 
 const BinNotePage = () => {
   return (
-    <div>BinNotePage</div>
+    <div className='ml-[380px] mt-[30px]'>BinNotePage</div>
   )
 }
 

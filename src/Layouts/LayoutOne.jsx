@@ -5,8 +5,11 @@ import { Outlet } from 'react-router-dom'
 const LayoutOne = () => {
   return (
     <>
-        <Navbar/>
-        <Outlet/>
+        <div className='w-full h-[100vh] bg-brandColor '>
+          <Navbar/>
+          <Outlet/>
+        </div>
+        
     </>
   )
 }

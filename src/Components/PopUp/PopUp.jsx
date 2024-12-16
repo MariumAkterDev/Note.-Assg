@@ -11,9 +11,15 @@ const PopUp = ({showvalue, popCross}) => {
   const [showColor, setShowColor] = useState(false)
   // ------------------- usestate for to-do data
   const [todoData, setTodoData] = useState({todoTitle:'', todoNote:'', todoError:''})
+  // ----------------------------- usestate for color palate
+  const [colorss, setColorss] = useState('#fff')
+
+  
 
 
   // =============================== all Raw Funstions Starts
+
+
   const handleSave = () =>{
     if(todoData.todoTitle == ''){
       setTodoData((prev)=>({...prev, todoError: 'Enter your todo title'}))
@@ -31,7 +37,7 @@ const PopUp = ({showvalue, popCross}) => {
 
   return (
     <>
-      <div className={`popMother ${showvalue ? "w-full" : "w-0"}`}>
+      <div  className={`popMother ${showvalue ? "w-full" : "w-0"}`}>
         <button
           onClick={popCross}
           className={`cross ${showvalue ? "opacity-[1]" : "opacity-0"}`}
@@ -39,7 +45,7 @@ const PopUp = ({showvalue, popCross}) => {
           <RxCross2 className="cross_Icon" />
         </button>
         {/* ================================= Input Feilds ================================= */} 
-        <div className={`popNote ${showvalue ? "block" : "hidden"}`}>
+        <div style={{background:colorss}} className={`popNote ${showvalue ? "block" : "hidden"}`}>
              {/* --------------- input field error ----------- */}
           <p className='text-[18px] text-[red]'>{todoData.todoError}</p>
           {/* ============ All input and title fields ============= */}
@@ -74,9 +80,9 @@ const PopUp = ({showvalue, popCross}) => {
                   showColor ? "left-[63px]" : "left-[-150px]"
                 } transition-all duration-[0.6s] `}
               >
-                <button className="w-[22px] h-[22px] bg-[#6acffb] rounded-full"></button>
-                <button className="w-[22px] h-[22px] bg-[#FFA24C] rounded-full"></button>
-                <button className="w-[22px] h-[22px] bg-[#E4B1F0] rounded-full"></button>
+                <button onClick={()=>setColorss('#6acffb')} className="w-[25px] h-[25px] bg-[#6acffb] rounded-full"></button>
+                <button onClick={()=>setColorss('#FFA24C')} className="w-[25px] h-[25px] bg-[#FFA24C] rounded-full"></button>
+                <button onClick={()=>setColorss('#E4B1F0')} className="w-[25px] h-[25px] bg-[#E4B1F0] rounded-full"></button>
 
                 <label htmlFor="colors">
                   <img
