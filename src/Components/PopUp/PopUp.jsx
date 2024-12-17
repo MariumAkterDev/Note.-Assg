@@ -2,20 +2,21 @@ import React, { useState } from 'react'
 import './PopUp.css'
 import { RxCross2 } from "react-icons/rx";
 import { getDatabase, push, ref, set } from "firebase/database";
+import { useSelector } from 'react-redux';
 
 
 const PopUp = ({showvalue, popCross}) => {
-  // ------------------------- firebase realtime data variable
-  const db = getDatabase();
+  // ---------------------------- redux data
+  const sliceUser = useSelector((state)=>state.currentUser.value)
+
   // ------------------- usestate for colorPalate toggole
   const [showColor, setShowColor] = useState(false)
   // ------------------- usestate for to-do data
-  const [todoData, setTodoData] = useState({todoTitle:'', todoNote:'', todoError:''})
+  const [todoData, setTodoData]   = useState({todoTitle:'', todoNote:'', todoError:''})
   // ----------------------------- usestate for color palate
-  const [colorss, setColorss] = useState('#fff')
-
-  
-
+  const [colorss, setColorss]     = useState('white')
+  // ------------------------- firebase realtime data variable
+  const db = getDatabase();
 
   // =============================== all Raw Funstions Starts
 
@@ -28,13 +29,18 @@ const PopUp = ({showvalue, popCross}) => {
     }else{
       set(push(ref(db, 'AllNote/')), {
         todoTitle:todoData.todoTitle, 
-        todoNote:todoData.todoNote
+        todoNote:todoData.todoNote,
+        noteBgColor:colorss,
+        pin:false,
+        creatorId: sliceUser.uid
       });
+      popCross()
+      setTodoData((prev)=>({...prev, todoTitle:'', todoNote:'', todoError:''}))
     }
   }
-  
-
-
+ 
+  console.log(todoData)
+ 
   return (
     <>
       <div  className={`popMother ${showvalue ? "w-full" : "w-0"}`}>
@@ -44,7 +50,8 @@ const PopUp = ({showvalue, popCross}) => {
         >
           <RxCross2 className="cross_Icon" />
         </button>
-        {/* ================================= Input Feilds ================================= */} 
+        {/* ================================= Input Feilds ================================= */}
+         {/*------------- bg color change  */}
         <div style={{background:colorss}} className={`popNote ${showvalue ? "block" : "hidden"}`}>
              {/* --------------- input field error ----------- */}
           <p className='text-[18px] text-[red]'>{todoData.todoError}</p>
@@ -55,6 +62,7 @@ const PopUp = ({showvalue, popCross}) => {
             className="popTiltleInp"
             placeholder="Add a title...."
             type="text"
+            value={todoData.todoTitle}
           />
           <h2 className="mt-[20px]">Note</h2>
           <textarea
@@ -62,6 +70,7 @@ const PopUp = ({showvalue, popCross}) => {
             className="popNoteInp"
             placeholder="Take a note..."
             type="text"
+            value={todoData.todoNote}
           />
           {/* ----------------- All input and title fields ----------------- */}
           {/* ============ Note colors buttons ============= */}
@@ -91,7 +100,7 @@ const PopUp = ({showvalue, popCross}) => {
                     className="w-[25px] h-[25px] hover:scale-[1.2] transition-all duration-[0.2s]"
                   />
                 </label>
-                <input id="colors" type="color" className="hidden" />
+                <input onChange={(e)=>setColorss(e.target.value)} id="colors" type="color" className="hidden" />
               </div>
               {/* -------------------- color pallete ends ------------------ */}
             </div>

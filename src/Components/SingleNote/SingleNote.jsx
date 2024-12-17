@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./SingleNote.css";
 import { getDatabase, ref, onValue } from "firebase/database";
+import { useSelector } from "react-redux";
 
 const SingleNote = ({}) => {
+   // ---------------------------- redux data
+   const sliceUser = useSelector((state)=>state.currentUser.value)
 
   // ========================================= custom variables
   const [allNote, setAllNote] = useState([])
@@ -21,7 +24,11 @@ const SingleNote = ({}) => {
       onValue(starCountRef, (snapshot) => {
         let arr = []
         snapshot.forEach((item)=>{
-          arr.push(item.val())
+   
+          if(item.val().creatorId == sliceUser.uid){
+            arr.push({...item.val() , key:item.key})
+          }
+        
         })
         setAllNote(arr)
 
@@ -37,13 +44,13 @@ const SingleNote = ({}) => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-[60px] ">
+      <div className="flex flex-wrap gap-[60px] ml-[380px] ">
 
        {/* --------- Data Print fun starts ------------ */}
 
         {allNote.map((item) => (
 
-          <div className="todSingCard">
+          <div style={{background:item.noteBgColor}} className="todSingCard">
             <h2 className="text-[20px] text-[#5d5c5c] font-semibold">
               {item.todoTitle}
             </h2>
